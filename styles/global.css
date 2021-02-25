@@ -25,3 +25,22 @@ img {
   max-width: 100%;
   display: block;
 }
+
+.backgroundSunny {
+  background-image: linear-gradient(45deg, #F8BB46, #E35357), repeating-linear-gradient(90deg, #C51D27, #EE7A35);
+  background-position: center center;
+  height: 500px;
+	transform: skewY(-11deg);
+}
+
+#main {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+}
+
+#content {
+	transform: skewY(11deg);
+}
