@@ -1,9 +1,10 @@
 import React from 'react'
+import WeeklyList from '../components/Weekly/WeeklyList'
 
 const weekly = () => {
     return (
         <div>
-            <h1>Weekly page under construction.</h1>
+            <WeeklyList />
         </div>
     )
 }
