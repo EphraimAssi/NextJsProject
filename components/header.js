@@ -8,7 +8,7 @@ export default function Header() {
                 <Navbar.Brand href="#home">Weather</Navbar.Brand>
                 <Nav className="mr-auto">
                     <Nav.Link href="#daily">Daily</Nav.Link>
-                    <Nav.Link href="#weekly">Weekly</Nav.Link>
+                    <Nav.Link href="weekly">Weekly</Nav.Link>
                 </Nav>
             </Navbar>
         </header>
