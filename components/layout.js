@@ -9,7 +9,7 @@ export default function Layout({ children }) {
         <div className="backgroundSunny">
           <div id="content">
             <Header></Header>
-            <main>{children}</main>
+            <main id="main">{children}</main>
           </div>
         </div>
       </div>

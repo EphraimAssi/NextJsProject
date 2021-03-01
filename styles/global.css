@@ -28,7 +28,7 @@ img {
 
 .backgroundSunnyBlur,
 .backgroundSunny {
-  background: url("../public/images/warmNight.jpg");
+  background: url("../public/images/sunny.jpg");
   width: 100vw;
   height: 100vh;
   background-repeat: no-repeat;
@@ -37,9 +37,23 @@ img {
 
 .backgroundSunnyBlur {
   background-size: cover;
-  backdrop-filter: blur(10px);
 }
 
 .backgroundSunny {
+  backdrop-filter: blur(10px);
   background-size: contain;
+}
+
+#main {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+.dailyCard {
+  margin: auto;
+  width: 50%;
+  position: relative;
+  top: 10%;
+  background-image: linear-gradient(45deg, #F3CB4C, #E1543A);
 }
