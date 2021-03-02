@@ -45,15 +45,18 @@ img {
 }
 
 #main {
+  top: 0;
+  bottom: 0;
   width: 100vw;
   height: 100vh;
   position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .dailyCard {
   margin: auto;
   width: 50%;
-  position: relative;
-  top: 10%;
+  top: 3vh;
   background-image: linear-gradient(45deg, #F3CB4C, #E1543A);
 }

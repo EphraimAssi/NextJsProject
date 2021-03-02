@@ -7,7 +7,7 @@ export default function Header() {
             <Navbar bg="dark" variant="dark">
                 <Navbar.Brand href="">Weather</Navbar.Brand>
                 <Nav className="mr-auto">
-                    <Nav.Link href="daily">Daily</Nav.Link>
+                    <Nav.Link href="hourly">Hourly</Nav.Link>
                     <Nav.Link href="weekly">Weekly</Nav.Link>
                 </Nav>
             </Navbar>
