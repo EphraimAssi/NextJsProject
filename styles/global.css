@@ -6,8 +6,27 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  height: inherit;
+  width: inherit;
 }
 
+html,
+body {
+  background: url("../public/images/background.png");
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+}
+
+html {
+  background-size: cover;
+}
+
+body {
+  background-repeat: repeat-y;
+  backdrop-filter: blur(10px);
+  background-size: contain;
+}
 * {
   box-sizing: border-box;
 }
@@ -24,24 +43,6 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
-}
-
-.backgroundSunnyBlur,
-.backgroundSunny {
-  background: url("../public/images/sunny.jpg");
-  width: 100vw;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.backgroundSunnyBlur {
-  background-size: cover;
-}
-
-.backgroundSunny {
-  backdrop-filter: blur(10px);
-  background-size: contain;
 }
 
 #main {
