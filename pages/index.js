@@ -5,8 +5,6 @@ import Layout, { siteTitle } from '../components/layout'
 export async function getStaticProps() {
   const res = await fetch("https://" + process.env.API_URL + "q=Ottawa,ca&appid=" + process.env.API_KEY)
   const posts = await res.json()
-  console.log(posts)
-
   return {
       props: {
           posts,
@@ -22,13 +20,22 @@ export default function Home({ posts }) {
   const description = posts.weather[0].description;
   const image = posts.weather[0].icon;
   const date = posts.dt;
+  const weatherType = posts.weather[0].id;
 
   return (
     <>
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <CurrentCard current={currentWeather} feels_like={feels_like} humidity={humidity} wind_speed={wind_speed} description={description} image={image} date={date}/>
+      <CurrentCard 
+      current={currentWeather} 
+      feels_like={feels_like} 
+      humidity={humidity} 
+      wind_speed={wind_speed} 
+      description={description} 
+      image={image} 
+      date={date} 
+      weatherType={weatherType}/>
     </>
   )
 }

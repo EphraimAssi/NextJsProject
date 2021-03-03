@@ -1,4 +1,5 @@
 import Card from 'react-bootstrap/Card'
+import styles from '../styles/currentCard.module.css'
 
 const day = (date) => {
   switch (new Date(date).getDay()) {
@@ -21,11 +22,34 @@ const day = (date) => {
     }
 }
 
+const checkWeatherType = (weatherType) =>{
+  if(weatherType === 800){
+    return styles.clear;
+  }
+  let digit = weatherType.toString()[0];
+  switch (digit) {
+    case '2':
+      return styles.thunderstorm;
+    case '3':
+      return styles.drizzle;
+    case '5':
+      return styles.rain;
+    case '6':
+      return styles.snow;
+    case '7':
+      return styles.atmosphere;
+    case '8':
+      return styles.clouds;
+    default:
+      return null;
+  }
+}
 
-export default function CurrentCard({ current, feels_like, humidity, wind_speed, image, description, date }) {
+export default function CurrentCard({ current, feels_like, humidity, wind_speed, image, description, date, weatherType }) {
     const imageLink = "/images/icons/"+image+".png"
+    
     return (
-        <Card style={{ width: '18rem' }} className="dailyCard">
+        <Card style={{ width: '18rem' }} className={`${styles.dailyCard} ${checkWeatherType(weatherType)}`}>
             <Card.Header>
                 <div>
                     {day(date)}: {current}°C
