@@ -21,8 +21,18 @@ const weeklyCards = (posts) =>{
     const description = post.weather[0].description;
     const image = post.weather[0].icon;
     const date = post.dt;
-    return <CurrentCard key={i} current={currentWeather} feels_like={feels_like} humidity={humidity} wind_speed={wind_speed} description={description} image={image} date={date}/>
- })
+    const weatherType = post.weather[0].id;
+
+    return <CurrentCard key={i} 
+    current={currentWeather} 
+    feels_like={feels_like} 
+    humidity={humidity} 
+    wind_speed={wind_speed} 
+    description={description} 
+    image={image} 
+    date={date} 
+    weatherType={weatherType}/>
+ });
  
 
 }

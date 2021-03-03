@@ -1,0 +1,27 @@
+
+.dailyCard {
+    margin: auto;
+    width: 50%;
+    top: 3vh;
+  }
+.rain {
+    background-image: linear-gradient(45deg, #1d4175, #7185a3);
+}
+.thunderstorm {
+    background-image: linear-gradient(45deg,#002b6b , #F3CB4C);
+}
+.drizzle {
+    background-image: linear-gradient(45deg, #588edb, #bad3f7);
+}
+.snow {
+    background-image: linear-gradient(45deg, #cfd1d4, #9c9c9c);
+}
+.atmosphere {
+    background-image: linear-gradient(45deg, #7fb2fa, #006aff);
+}
+.clear {
+    background-image: linear-gradient(45deg, #94b7f7, #5c91f2);
+}
+.clouds {
+    background-image: linear-gradient(45deg, #afb4bd, #6b7382);
+}
