@@ -21,13 +21,14 @@ export default function Home({ posts }) {
   const wind_speed = Math.round(posts.wind.speed * 3.6);
   const description = posts.weather[0].description;
   const image = posts.weather[0].icon;
+  const date = posts.dt;
 
   return (
     <>
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <CurrentCard current={currentWeather} feels_like={feels_like} humidity={humidity} wind_speed={wind_speed} description={description} image={image}/>
+      <CurrentCard current={currentWeather} feels_like={feels_like} humidity={humidity} wind_speed={wind_speed} description={description} image={image} date={date}/>
     </>
   )
 }

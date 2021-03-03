@@ -1,40 +1,34 @@
 import Card from 'react-bootstrap/Card'
 
-export default function CurrentCard({ current, feels_like, humidity, wind_speed, image, description }) {
-    const imageLink = "/images/icons/"+image+".png"
-
-    function day () {
-        switch (new Date().getDay()) {
-            case 0:
-              day = "Sunday";
-              break;
-            case 1:
-              day = "Monday";
-              break;
-            case 2:
-               day = "Tuesday";
-              break;
-            case 3:
-              day = "Wednesday";
-              break;
-            case 4:
-              day = "Thursday";
-              break;
-            case 5:
-              day = "Friday";
-              break;
-            case 6:
-              day = "Saturday";
-          }
-
-          return day;
+const day = (date) => {
+  switch (new Date(date).getDay()) {
+      case 0:
+        return "Sunday";
+      case 1:
+        return "Monday";
+      case 2:
+        return "Tuesday";
+      case 3:
+        return "Wednesday";
+      case 4:
+        return "Thursday";
+      case 5:
+        return "Friday";
+      case 6:
+        return "Saturday";
+      default:
+        return "Unknown";
     }
+}
 
+
+export default function CurrentCard({ current, feels_like, humidity, wind_speed, image, description, date }) {
+    const imageLink = "/images/icons/"+image+".png"
     return (
         <Card style={{ width: '18rem' }} className="dailyCard">
             <Card.Header>
                 <div>
-                    {day()}: {current}°C
+                    {day(date)}: {current}°C
                 </div>
                 <div>
                     {description}
