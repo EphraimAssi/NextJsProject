@@ -1,10 +1,34 @@
 import Card from 'react-bootstrap/Card'
+import styles from '../styles/currentCard.module.css'
+
+const checkWeatherType = (weatherType) =>{
+    if(weatherType === 800){
+      return styles.clear;
+    }
+    let digit = weatherType.toString()[0];
+    switch (digit) {
+      case '2':
+        return styles.thunderstorm;
+      case '3':
+        return styles.drizzle;
+      case '5':
+        return styles.rain;
+      case '6':
+        return styles.snow;
+      case '7':
+        return styles.atmosphere;
+      case '8':
+        return styles.clouds;
+      default:
+        return null;
+    }
+  }
 
 export default function HourlyCard({ current, feels_like, humidity, wind_speed, image, description, dateTime, weatherType}) {
     const imageLink = "/images/icons/"+image+".png"
     
     return (
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '18rem' }} className={`${styles.hourCard} ${checkWeatherType(weatherType)}`}>
             <Card.Header>
                 <div>
                     {dateTime}: {current}°C

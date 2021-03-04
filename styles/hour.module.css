@@ -1,0 +1,10 @@
+.container {
+    margin: auto;
+    width: 50%;
+    top: 3vh;
+}
+
+.carousel {
+    width: 100vw;
+    height: 100vh;
+}

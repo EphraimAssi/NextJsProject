@@ -1,4 +1,8 @@
-
+.hourCard{
+    margin: auto;
+    width: 50%;
+    top: 3vh;
+}
 .dailyCard {
     margin: auto;
     width: 50%;
