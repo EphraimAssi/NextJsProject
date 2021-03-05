@@ -34,7 +34,7 @@ export default function CurrentCard({ current, feels_like, humidity, wind_speed,
         <Card style={{ width: '18rem' }} className={`${styles.dailyCard} ${checkWeatherType(weatherType)}`}>
             <Card.Header>
                 <div>
-                    {date===null? day : moment(new Date(date)).format('dddd, MMMM Do YYYY')}: {current}°C
+                    {date===null? day : moment(new Date(date)).format('dddd, MMMM Do YYYY')}<br /> {current}°C
                 </div>
                 <div>
                     {description}
