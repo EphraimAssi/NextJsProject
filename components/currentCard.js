@@ -1,26 +1,8 @@
 import Card from 'react-bootstrap/Card'
 import styles from '../styles/currentCard.module.css'
+import moment from 'moment'
 
-const day = (date) => {
-  switch (new Date(date).getDay()) {
-      case 0:
-        return "Sunday";
-      case 1:
-        return "Monday";
-      case 2:
-        return "Tuesday";
-      case 3:
-        return "Wednesday";
-      case 4:
-        return "Thursday";
-      case 5:
-        return "Friday";
-      case 6:
-        return "Saturday";
-      default:
-        return "Unknown";
-    }
-}
+const day = moment(new Date()).format('dddd, MMMM Do YYYY')
 
 const checkWeatherType = (weatherType) =>{
   if(weatherType === 800){
@@ -45,14 +27,14 @@ const checkWeatherType = (weatherType) =>{
   }
 }
 
-export default function CurrentCard({ current, feels_like, humidity, wind_speed, image, description, date, weatherType }) {
+export default function CurrentCard({ current, feels_like, humidity, wind_speed, image, description, weatherType, date }) {
     const imageLink = "/images/icons/"+image+".png"
     
     return (
         <Card style={{ width: '18rem' }} className={`${styles.dailyCard} ${checkWeatherType(weatherType)}`}>
             <Card.Header>
                 <div>
-                    {day(date)}: {current}°C
+                    {date===null? day : moment(new Date(date)).format('dddd, MMMM Do YYYY')}: {current}°C
                 </div>
                 <div>
                     {description}

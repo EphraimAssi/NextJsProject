@@ -19,7 +19,6 @@ export default function Home({ posts }) {
   const wind_speed = Math.round(posts.wind.speed * 3.6);
   const description = posts.weather[0].description;
   const image = posts.weather[0].icon;
-  const date = posts.dt;
   const weatherType = posts.weather[0].id;
 
   return (
@@ -34,8 +33,8 @@ export default function Home({ posts }) {
       wind_speed={wind_speed} 
       description={description} 
       image={image} 
-      date={date} 
-      weatherType={weatherType}/>
+      weatherType={weatherType}
+      date={null}/>
     </>
   )
 }

@@ -20,7 +20,7 @@ const weeklyCards = (posts) =>{
     const wind_speed = Math.round(post.wind.speed * 3.6);
     const description = post.weather[0].description;
     const image = post.weather[0].icon;
-    const date = post.dt;
+    const date = post.dt_txt;
     const weatherType = post.weather[0].id;
 
     return <CurrentCard key={i} 
