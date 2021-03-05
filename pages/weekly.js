@@ -63,13 +63,11 @@ const weekly = ({
     posts
 }) => {
 
-    return ( <
-        div className = {
+    return ( <div className = {
             styles.container
-        } > {
+        }> {
             weeklyCards(posts)
-        } <
-        /div>
+        } </div>
     )
 }
 
