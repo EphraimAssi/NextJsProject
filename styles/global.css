@@ -54,3 +54,7 @@ img {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
+.carousel-indicators {
+  top: 100%;
+}
