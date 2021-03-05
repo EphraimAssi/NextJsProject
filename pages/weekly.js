@@ -26,48 +26,23 @@ const weeklyCards = (posts) => {
         const date = new Date(post.dt_txt).getTime();
         const weatherType = post.weather[0].id;
 
-        return <CurrentCard key = {
-            i
-        }
-        current = {
-            currentWeather
-        }
-        feels_like = {
-            feels_like
-        }
-        humidity = {
-            humidity
-        }
-        wind_speed = {
-            wind_speed
-        }
-        description = {
-            description
-        }
-        image = {
-            image
-        }
-        date = {
-            date
-        }
-        weatherType = {
-            weatherType
-        }
-        />
+        return <CurrentCard key={i} 
+        current={currentWeather} 
+        feels_like={feels_like} 
+        humidity={humidity} 
+        wind_speed={wind_speed} 
+        description={description} 
+        image={image} 
+        date={date} 
+        weatherType={weatherType}/>
     });
-
-
 }
 
-const weekly = ({
-    posts
-}) => {
-
-    return ( <div className = {
-            styles.container
-        }> {
-            weeklyCards(posts)
-        } </div>
+const weekly = ({posts}) => {
+    return ( 
+        <div className = {styles.container}> 
+            {weeklyCards(posts)} 
+        </div>
     )
 }
 
