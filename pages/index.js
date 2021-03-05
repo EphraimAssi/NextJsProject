@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import CurrentCard from '../components/currentCard'
 import Layout, { siteTitle } from '../components/layout'
+import styles from '../styles/home.module.css'
 
 export async function getStaticProps() {
   const res = await fetch("https://" + process.env.API_URL + "q=Ottawa,ca&appid=" + process.env.API_KEY)
@@ -26,15 +27,23 @@ export default function Home({ posts }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <CurrentCard 
-      current={currentWeather} 
-      feels_like={feels_like} 
-      humidity={humidity} 
-      wind_speed={wind_speed} 
-      description={description} 
-      image={image} 
-      weatherType={weatherType}
-      date={null}/>
+      <div className={styles.container}>
+        <h1>Next.js DTS Weather App</h1>
+        <h4 className={styles.white}>Hi! We are two young developers working for ESDC using React and Next.js. This application is purely to practice our Next.js skills.</h4>
+<hr />
+        <h3 className={styles.white}>Today's Weather in Ottawa</h3>
+        <CurrentCard 
+        current={currentWeather} 
+        feels_like={feels_like} 
+        humidity={humidity} 
+        wind_speed={wind_speed} 
+        description={description} 
+        image={image} 
+        weatherType={weatherType}
+        date={null}/>           
+      </div>
+      <br />
+      <br />
     </>
   )
 }
