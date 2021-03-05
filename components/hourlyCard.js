@@ -40,7 +40,7 @@ export default function HourlyCard({ current, feels_like, humidity, wind_speed, 
 
   return (
     <Card style={{ width: '100%' }} className={`${styles.hourCard} ${checkWeatherType(weatherType)}`}>
-      <Card.Header>
+      <Card.Header className="hourCardHeader">
         <div>
           {date(dateTime)[0]} - {date(dateTime)[1]}
         </div>
@@ -55,11 +55,11 @@ export default function HourlyCard({ current, feels_like, humidity, wind_speed, 
             <Col>
               <Card.Title>{current}°C</Card.Title>
               <Row><Col>Feels like: {feels_like}°C</Col></Row>
-              <Row>
+              <Row className="hourContentRow">
                 <Col>Temperature min: {temp_min}°C</Col>
                 <Col>Temperature max: {temp_max}°C</Col>
               </Row>
-              <Row>
+              <Row className="hourContentRow">
                 <Col>Humidity: {humidity} %</Col>
                 <Col>Pressure: {pressure} hPa</Col>
               </Row>

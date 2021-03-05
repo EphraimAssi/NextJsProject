@@ -54,3 +54,11 @@ img {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
+.carousel-indicators {
+  top: 100%
+}
+
+.hourContentRow{
+  padding-top: 2vh
+}
